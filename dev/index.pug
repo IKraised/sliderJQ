@@ -1,0 +1,20 @@
+include components/global.pug
+include components/svg/index.pug
+include components/head/index.pug
+
+- 
+    pageSettings = {
+        title: 'Главная',
+        contacts: false
+    }
+
+
+<!DOCTYPE html>
+html(lang=global.lang)
+    head
+        +head(pageSettings)
+    body.page
+        main.main
+            .container
+            include components/blocks/slider/index.pug
+        include components/footer/index.pug
